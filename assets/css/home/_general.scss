@@ -1,0 +1,353 @@
+.home-page {
+  background: #f0f0f0;
+}
+
+.reviews-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+  > .header {
+    position: relative;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    &:before {
+      content: '';
+      display: block;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 0;
+      right: -170px;
+      background-image: url(assets/images/signos/constelacao-sagitario-black.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 0;
+      left: -170px;
+      background-image: url(assets/images/signos/constelacao-virgem-black.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    > p {
+      font-weight: bold;
+    }
+    > strong {
+      display: block;
+      font-size: 80px;
+    }
+  }
+  .rating-block {
+    text-align: center;
+    margin: 0 auto;
+    a {
+      display: block;
+      font-size: 28px;
+      margin-top: 5px;
+    }
+  }
+  .slider-actions.disabled {
+    pointer-events: none;
+    opacity: .3;
+  }
+  .slider-actions {
+    position: absolute;
+    border: 0;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    // background: #131d6395;
+    color: #333;
+    border: 4px solid #000000;
+    cursor: pointer;
+    svg {
+      width: 25px;
+    }
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+  .slider-actions.prev {
+    left: 10px;
+  }
+  .slider-actions.next {
+    right: 10px;
+  }
+  .reviews {
+    position: relative;
+    overflow-x: scroll;
+    margin-top: 20px;
+    .reviews-line:nth-child(2) {
+      align-items: flex-start !important;
+      margin-left: 150px;
+    }
+    .reviews-line {
+      display: flex;
+      padding: 10px 20px;
+      align-items: flex-end;
+      .item {
+        min-width: 300px;
+        max-width: 300px;
+        background: #fff;
+        padding: 20px;
+        margin-right: 20px;
+        border-radius: 4px;
+        .text {
+          margin-bottom: 5px;
+        }
+        .details {
+          display: flex;
+          align-items: center;
+          img {
+            min-width: 45px;
+            max-width: 45px;
+            margin-right: 10px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .name-and-source {
+            span {
+              display: block;
+              font-size: 13px;
+              line-height: 18px;
+            }
+            small {
+              font-size: 10px;
+              line-height: 16px;
+              color: rgba(0,0,0,0.5);
+            }
+            @media (min-width: 1024px) {
+              span {
+                font-size: 16px;
+                line-height: 20px;
+              }
+              small {
+                font-size: 14px;
+                line-height: 18px;
+              }
+            }
+          }
+          .stars-group i {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      margin-top: 40px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .reviews-line:nth-child(2) {
+        margin-left: 200px;
+      }
+      .reviews-line .item {
+        min-width: 400px;
+        max-width: 400px;
+        .text {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .clients-images {
+    height: 300px;
+    .flickity-viewport {
+      height: 300px;
+    }
+    .item {
+      // min-width: 300px;
+      // height:300px;
+      margin-right: 10px;
+      img {
+        min-width: 300px;
+        width:300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+      }
+      span {
+        display: block;
+        font-weight: bold;
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  .__fbcw__widget {
+    min-height: 500px !important;
+    border-radius: 6px !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    .__fbcw__widget__footer {
+      position: absolute !important;
+      bottom: 0 !important;
+      width: 100% !important;
+    }
+  }
+  @media (min-width: 768px) {
+    .__fbcw__widget {
+      margin: 0 !important;
+    }
+  }
+}
+
+
+
+
+.container {
+  width: 800px;
+  margin: 30px auto;
+}
+
+.mejs {
+  &__container {
+    margin-top: 10px;
+  }
+  
+  &__controls {
+    display: block;
+  }
+  
+  &__controls, &__container {
+    background: none !important;
+  }
+  
+  &__time {
+    color: #777;
+    font-weight: normal;
+  }
+}
+
+.podcast {
+  background: #f0f0f0;
+  padding: 30px;
+  border-radius: 3px;
+  
+  &__episode_title {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  &__title {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #555;
+    i {
+      font-style: normal;
+      font-weight: normal;
+      text-transform: capitalize;
+      margin-left: 10px;
+    }
+  }
+  
+  &__meta {
+    background: #ddd;
+    margin: 40px -30px -30px -30px;
+    padding: 0 30px 30px 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+      .artwork {
+        margin-right: 0;
+        transform: translateY(-70px);
+        >img {
+          border-radius: 3px;
+          width: 150px;
+          height: 150px;
+          box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.1);
+          margin-bottom: -80px;
+        }
+      }
+  }
+  
+  
+}
+
+.mejs-prepended-buttons {
+  display: flex
+}
+
+.mejs-appended-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mejs__play > button {
+  background: transparent url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg') no-repeat;
+}
+
+.mejs__pause > button {
+  background: transparent url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg') no-repeat;
+  background-position: -20px 0;
+}
+
+.mejs__mute > button {
+    background: transparent url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg') no-repeat;
+  background-position: -60px 0;
+}
+
+.mejs__unmute > button {
+      background: transparent url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/mediaplayer-sprite-gray.svg') no-repeat;
+  background-position: -40px 0;
+}
+
+.mejs-skip-back-button>button, 
+.mejs__skip-back-button>button {
+   background: transparent url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/skipback.svg');
+}
+
+.mejs-jump-forward-button>button, .mejs__jump-forward-button>button {
+  background: url('https://cdn.jsdelivr.net/gh/ivorpad/images-src/jumpforward.svg') no-repeat;
+}
+
+.mejs__button > button {
+  color: #555;
+}
+
+.mejs__horizontal-volume-slider {
+  display: none !important;
+}
+
+.home-page {
+  overflow-x: hidden;
+}
+
+.flickity-page-dots {
+  display: none;
+}
+
+.product-gallery-list img,
+#stars-preview,
+.product-gallery-main img {
+  position: absolute;
+}
+
+.primary-banner .item {
+  position: absolute;
+  min-height: 500px;
+}
+
+.product-template-default .mp-credits-tooltip-container {
+  display: none !important;
+}

@@ -1,0 +1,110 @@
+.blog-page-content {
+  padding-top: 20px !important;
+}
+
+.blog-list {
+  > .more-trigger {
+    display: block;
+    width: 172px;
+    margin: 12px auto 0;
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.blog-list > .item {
+  display: block;
+  box-shadow: 0px 2px 9px rgba(0, 31, 29, 0.14);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  > .image {
+    height: 160px;
+  }
+  > .image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  > .text {
+    padding: 16px 12px 20px;
+  }
+  > .text > .category {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: $secondary;
+    margin-bottom: 12px;
+  }
+  > .text > .category > time {
+    color: #757575;
+  }
+  > .text > .title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 6px;
+  }
+  > .text > .description {
+    display: -webkit-box;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #757575;
+    margin-bottom: 12px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  > .text > .tags {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    color: #afafaf;
+  }
+  > .more-trigger {
+    display: block;
+    width: 172px;
+    margin: 24px auto 0;
+  }
+  @media (min-width: 1024px) {
+    width: 32.5%;
+    > .text {
+      padding: 22px;
+    }
+    > .text > .category {
+      margin-bottom: 8px;
+    }
+    > .text > .title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 6px;
+    }
+    > .text > .description {
+      margin-bottom: 6px;
+    }
+    > .text > .tags {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.01);
+      }
+    }
+  }
+}
+
+.navigation.pagination {
+  text-align: center;
+  margin: 20px auto;
+}

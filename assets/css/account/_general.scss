@@ -1,0 +1,246 @@
+.woocommerce-account {
+  > .woocommerce {
+    max-width: 1000px;
+    width: 100%;
+    margin: 32px auto;
+  }
+
+  .over-footer {
+    display: none;
+  }
+
+  .woocommerce-notices-wrapper {
+    max-width: 100%;
+  }
+
+}
+ 
+
+.woocommerce-MyAccount-content {
+  float: none;
+  h2 {
+    font-size: 18px !important;
+	  line-height: 24px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+	  line-height: 24px !important;
+  }
+
+  .section-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .woocommerce-Address {
+    box-shadow: 0px 2px 7px rgba(0, 31, 29, 0.18);
+    border-radius: 6px;
+
+    padding: 16px;
+  }
+  .woocommerce-Address header h3 {
+    font-weight: 600;
+  }
+  .woocommerce-Address address {
+    font-weight: bold;
+  }
+  .woocommerce-Address + .woocommerce-Address {
+    margin-top: 12px;
+  }
+  .woocommerce-Address .edit {
+    display: block;
+    width: 130px;
+    margin-left: auto;
+  }
+
+  table th,
+  table td {
+    padding: 16px 32px !important;
+  }
+
+  .woocommerce-columns--addresses > div {
+    border: 1px solid #afafaf;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    > h2 {
+      padding: 16px 32px;
+      border-bottom: 1px solid #afafaf;
+    }
+  }
+
+  .woocommerce-columns--addresses address {
+    border: none;
+    padding: 16px 32px;
+  }
+
+  @media (min-width: 768px) {
+    width: calc(100% - 330px) !important;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    padding: 32px;
+    float: right;
+    .section-title {
+      text-align: left;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+.woocommerce-MyAccount-navigation {
+  margin-bottom: 26px;
+  @media (min-width: 1024px) {
+    float: left;
+    background: #F6F6F6;
+  }
+}
+
+
+.woocommerce-EditAccountForm {
+  max-width: 350px;
+  margin: 70px auto 0;
+  label {
+    font-size: 16px;
+    line-height: 20px !important;
+    margin-bottom: 8px;
+  }
+  input {
+    width: 100%;
+    color: #757575;
+    border: 1px solid #AFAFAF !important;
+    margin-bottom: 14px;
+  }
+  p span em {
+    font-size: 80%;
+    margin-top: 2px;
+    display: block;
+  }
+  legend {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 22px;
+    padding-top: 22px;
+  }
+  button[name="save_account_details"] {
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 48px;
+    color: #fff;
+    background: #ED6E33;
+    border-radius: 6px;
+    margin-top: 26px;
+    cursor: pointer;
+  }
+  @media (min-width: 768px) {
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    button[name="save_account_details"] {
+      width: 133px;
+      margin: 40px auto 0;
+    }
+  }
+}
+
+.current-password-row > .help-text {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px; 
+  color: #333333;
+  margin-top: 7px;
+  margin-bottom: 14px;
+}
+
+
+.account-anamnese-block {
+  h3 {
+    font-weight: bold !important;
+    margin-bottom: 16px;
+  }
+  > p {
+    font-weight: 600; 
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  label {
+    text-align: center;
+  }
+  .medicines-item {
+    background: #F6F6F6;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 6px;
+    input {
+      background: #fff;
+    }
+
+    .medicines-text {
+      display: none;
+      margin-top: 15px;
+      margin-bottom: 0;
+      label {
+        margin-bottom: 10px;
+      }
+      input {
+        margin-bottom: 0px;
+      }
+    }
+
+    &.-active .medicines-text {
+      display: block;
+    }
+  }
+  .anamnese-accept-terms {
+    text-align: left; 
+    margin-top: 26px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+  }
+  @media (min-width: 1024px) {
+    .anamnese-accept-terms {
+      width: 116%;
+      margin-left: -8%;
+    }
+  }
+}
+
+.woocommerce-favoritos {
+  .wishlist-content {
+    .product-list {
+      justify-content: space-between;
+      .product-card {
+        width: 49%;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .woocommerce-MyAccount-content {
+      padding: 0;
+      box-shadow: none;
+    }
+    .section-title {
+      font-size: 24px !important;
+      line-height: 32px !important;
+    }
+  }
+}
+
+.pdf-account-order-info button {
+  padding: 5px 10px;
+  color: #fff;
+  background-color: $secondary;
+  border-radius: 6px;
+}

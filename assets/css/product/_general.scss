@@ -1,0 +1,178 @@
+.single-product #shipping-calc {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  float: none !important;
+}
+
+.single-product #shipping-calc .input-text {
+  width: calc(100% - 138px);
+}
+
+.single-product #shipping-calc #wscp-button {
+  width: auto;
+  &.loading {
+    background-image: url('assets/images/loader.gif') !important;
+    background-position: center !important;
+	  background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+.single-product #shipping-calc #wscp-response {
+  width: 100%;
+  table {
+    tr {
+      display: inherit !important;
+    }
+    td {
+      text-align: left !important;
+    }
+  }
+}
+
+.shipping-block-info {
+  display: block;
+  border: 3px solid #f7842c;
+  padding: 5px;
+  text-align: center;
+  margin-top: 20px;
+  background: #fff;
+}
+.shipping-block-info.-secondary {
+  border-color: #0d025f;
+}
+.shipping-block-info.-tertiary {
+  border-color: #1f6d75;
+}
+
+.shipping-block-info p {
+  margin: 0;
+  color: #f7842c;
+}
+
+.shipping-block-info.-secondary p {
+  color: #0d025f;
+}
+
+.shipping-block-info.-tertiary p {
+  color: #1f6d75;
+}
+
+.price-block-info {
+  display: block;
+  margin-top: 20px;
+}
+
+.price-block-info p {
+  text-align: center;
+  margin: 0;
+}
+
+.price-block-info .-price {
+  font-size: 30px;
+  line-height: 34px;
+  font-weight: bold;
+  color: #f7842c;
+}
+
+.price-block-info .-price.-secondary {
+  color: #0d025f;
+}
+
+.price-block-info .-price.-tertiary {
+  color: #1f6d75;
+}
+
+@media (min-width: 1024px) {
+  .price-block-info .-price {
+    font-size: 38px
+  } 
+}
+
+.rd-email-form ~ .wpcf7-response-output,
+.rd-email-form {
+  display: none !important;
+}
+
+.map-spotify-qrcode {
+  // width: 200px;
+  margin: 0 auto 5px;
+  // margin-left: 91px;
+  img {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+.ilustration-group {
+  flex-wrap: wrap;
+  label {
+    height: auto !important;
+    text-align: center;
+    padding:0px;
+    margin-bottom: 10px;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  label svg {
+    height: auto
+  }
+  label img {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 5px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 5px;
+    object-fit: contain;
+    transition: none;
+  }
+
+  input:checked + label img {
+    border-color: #f7842d;
+  }
+
+  label p {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  label small {
+    display: block;
+    font-size: 8px;
+    line-height: 10px;
+  }
+}
+
+.label-stile-group {
+  flex-wrap: wrap;
+  label {
+    display: flex;
+    align-items: center;
+    height: auto !important
+  }
+
+  label svg {
+    height: auto
+  }
+  label img {
+    height: 84px;
+    margin: 0 auto;
+  }
+}
+
+.custom-label-colors {
+  flex-wrap: wrap;
+  label {
+    background-size: cover !important;
+    background-position: center !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+	a[data-target="calc-shipping"] {
+		display: none !important;
+  }

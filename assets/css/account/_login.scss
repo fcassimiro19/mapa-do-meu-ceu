@@ -1,0 +1,181 @@
+.login-content {
+  margin: 32px auto !important;
+  .woocommerce-form-register,
+  .woocommerce-form-login {
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .woocommerce-form-register__submit,
+  .woocommerce-form-login__submit {
+    display: block;
+    margin: 20px 0 5px;
+    float: none !important;
+    border-radius: 6px;
+    padding: 10px;
+    background: $primary;
+    color: #fff;
+  }
+  form.checkout_coupon, 
+  form.login, 
+  form.register {
+    padding: 0;
+    margin: 2em 0;
+	  text-align: left;
+  }
+
+  form .form-row {
+    padding: 3px;
+  }
+  form .form-row input.input-text, 
+  form .form-row textarea {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: normal;
+  }
+  form .form-row label {
+    line-height:2;
+  }
+
+  .woocommerce-form-register {
+    margin-top: 16px !important;
+  }
+  .woocommerce-form-register p {
+    font-weight: 600;
+  }
+  .woocommerce-form-login {
+    border-bottom: 0.5px solid #AFAFAF !important;
+    margin-top: 16px !important;
+    margin-bottom: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .woocommerce-privacy-policy-text {
+    display: none;
+  }
+
+  .lost_password {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #007a75;
+  }
+  @media (min-width: 768px) {
+    #customer_login {
+      display: flex;
+      justify-content: space-between;
+      > div {
+        width: 50%;
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+    .reg-col {
+      display: flex;
+      flex-direction: column;
+    }
+    .woocommerce-form-login {
+      border-bottom: 0 !important;
+      border-right:  0.5px solid #AFAFAF !important;
+      padding-bottom: 0 !important;
+      padding-right: 32px !important;
+    }
+    .woocommerce-form-register {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      padding-left: 24px !important;
+    }
+    .woocommerce-form-register,
+    .woocommerce-form-login {
+      margin-top: 24px !important;
+   }
+   .form-row {
+     margin: 0 !important;
+   }
+  }
+  @media (min-width: 1024px) {
+    margin: 48px auto 0 !important;
+  }
+}
+
+.woocommerce-ResetPassword {
+
+  input {
+    line-height: 44px !important;
+  }
+  button[type="submit"] {
+    background: $secondary;
+    color: #fff;
+    border-radius: 6px;
+    text-transform: uppercase;
+    padding: 15px;
+  }
+}
+
+
+.the_champ_login_container ul.the_champ_login_ul {
+  margin-top: 16px !important;
+  @media (min-width: 1024px) {
+    margin-top: 24px !important;
+  }
+}
+
+.the_champ_login_container ul.the_champ_login_ul li {
+	position: relative !important;
+  display: block !important;
+  width: 100% !important;
+	max-width: 370px !important;
+	text-align: left !important;
+	margin: 0 auto 20px !important;
+	background: #218cf2!important;
+	float: none !important;
+}
+
+body div.the_champ_login_container i.theChampFacebookBackground,
+.the_champ_login_container ul.the_champ_login_ul li:first-child {
+  background: #4267B2 !important;
+}
+
+.the_champ_login_container ul.the_champ_login_ul li i.theChampLogin {
+	float: none;
+	display: inline-block !important;
+}
+
+.the_champ_login_container ul.the_champ_login_ul li i.theChampLogin:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-weight: bold;
+  white-space: nowrap;
+  width: 300px;
+	line-height: 35px;
+	text-align: center;
+}
+
+.the_champ_login_container ul.the_champ_login_ul li i.theChampFacebookLogin:after {
+  content: 'Continuar com Facebook';
+}
+
+.the_champ_login_container ul.the_champ_login_ul li i.theChampGoogleLogin:after {
+ content: 'Continuar com Google'; 
+}
+
+@media (max-width: 800px){
+  .woocommerce-account {
+    .login-content{
+      .col-6{
+        max-width: 100%!important;
+      }
+    }
+  }
+}
+
+

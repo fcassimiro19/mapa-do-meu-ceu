@@ -1,0 +1,203 @@
+//Order Status
+.order-status-block {
+  width: 110%;
+  background: #F6F6F6;
+  margin: 32px 0 32px -16px;
+  padding: 24px 16px 36px;
+
+  ul {
+    padding-left: 25px;
+  }
+  strong {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    margin-left: 20px;
+  }
+  li {
+    position: relative;
+    border-left: 4px solid #AFAFAF;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    color: #757575;
+  }
+  li:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -14px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #AFAFAF;
+  }
+  li:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+	  left: -8px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url('assets/icons/close-white.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  li:last-of-type {
+    border-color: transparent;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 300px;
+    margin: 16px auto;
+  }
+}
+
+.order-status-block ul.-pending,
+.order-status-block ul.-on-hold  {
+  li:first-of-type {
+    color: #2DCC89;
+    border-color: #2DCC89;
+  }
+  li:first-of-type:before {
+    background-color: #2DCC89;
+  }
+  li:first-of-type:after {
+    background-image: url('assets/icons/checkmark.svg');
+  }
+  // li:nth-child(2) {
+  //   color: $secondary;
+  //   border-color: $secondary;
+  // }
+  // li:nth-child(2):before {
+  //   background-color: $secondary;
+  // }
+}
+
+.order-status-block ul.-processing  {
+  li:nth-child(2),
+  li:first-of-type {
+    color: #2DCC89;
+    border-color: #2DCC89;
+  }
+  li:nth-child(2):before,
+  li:first-of-type:before {
+    background-color: #2DCC89;
+  }
+  li:nth-child(2):after,
+  li:first-of-type:after {
+    background-image: url('assets/icons/checkmark.svg');
+  }
+  // li:nth-child(3) {
+  //   color: $secondary;
+  //   border-color: $secondary;
+  // }
+  // li:nth-child(3):before {
+  //   background-color: $secondary;
+  // }
+}
+
+.order-status-block ul.-picking,
+.order-status-block ul.-producing  {
+  li:nth-child(3),
+  li:nth-child(2),
+  li:first-of-type {
+    color: #2DCC89;
+    border-color: #2DCC89;
+  }
+  li:nth-child(3):before,
+  li:nth-child(2):before,
+  li:first-of-type:before {
+    background-color: #2DCC89;
+  }
+  li:nth-child(3):after,
+  li:nth-child(2):after,
+  li:first-of-type:after {
+    background-image: url('assets/icons/checkmark.svg');
+  }
+  // li:nth-child(4) {
+  //   color: $secondary;
+  //   border-color: $secondary;
+  // }
+  // li:nth-child(4):before {
+  //   background-color: $secondary;
+  // }
+}
+
+.order-status-block ul.-out-for-delivery,
+.order-status-block ul.-pickup,
+.order-status-block ul.-shipped  {
+  li:nth-child(4),
+  li:nth-child(3),
+  li:nth-child(2),
+  li:first-of-type {
+    color: #2DCC89;
+    border-color: #2DCC89;
+  }
+  li:nth-child(4):before,
+  li:nth-child(3):before,
+  li:nth-child(2):before,
+  li:first-of-type:before {
+    background-color: #2DCC89;
+  }
+  li:nth-child(4):after,
+  li:nth-child(3):after,
+  li:nth-child(2):after,
+  li:first-of-type:after {
+    background-image: url('assets/icons/checkmark.svg');
+  }
+  // li:nth-child(5) {
+  //   color: $secondary;
+  //   border-color: $secondary;
+  // }
+  // li:nth-child(5):before {
+  //   background-color: $secondary;
+  // }
+}
+
+.order-status-block ul.-completed  {
+  li:nth-child(5),
+  li:nth-child(4),
+  li:nth-child(3),
+  li:nth-child(2),
+  li:first-of-type {
+    color: #2DCC89;
+    border-color: #2DCC89;
+  }
+  li:nth-child(5):before,
+  li:nth-child(4):before,
+  li:nth-child(3):before,
+  li:nth-child(2):before,
+  li:first-of-type:before {
+    background-color: #2DCC89;
+  }
+  li:nth-child(5):after,
+  li:nth-child(4):after,
+  li:nth-child(3):after,
+  li:nth-child(2):after,
+  li:first-of-type:after {
+    background-image: url('assets/icons/checkmark.svg');
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-account-order-details {
+    padding-left: 16px;
+  }
+}
+
+// .order-status-block ul.-completed  {
+//   li {
+//     color: #2DCC89 !important;
+//     border-color: #2DCC89 !important;
+//   }
+//   li:before {
+//     background-color: #2DCC89 !important;
+//   }
+//   li:after {
+//     background-image: url('assets/icons/checkmark.svg') !important;
+//   }
+// }

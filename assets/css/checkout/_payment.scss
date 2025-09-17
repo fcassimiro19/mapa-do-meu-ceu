@@ -1,0 +1,19 @@
+#payment {
+  display: flex;
+  flex-direction: column;
+  li + li {
+    margin-top: 10px !important;
+  }
+  li {
+    > input {
+      float: left;
+      height: 28px;
+    }
+    > label img {
+      display: inline-block
+    }
+    > label a {
+      line-height: 28px !important;
+    }
+  }
+}

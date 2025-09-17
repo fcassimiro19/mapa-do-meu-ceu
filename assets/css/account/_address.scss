@@ -1,0 +1,141 @@
+.woocommerce-MyAccount-content .woocommerce-Address {
+  box-shadow: 0px 2px 7px rgba(0, 31, 29, 0.18);
+  border-radius: 6px;
+  padding: 16px;
+
+  header h3 {
+    font-weight: 600;
+  }
+  address {
+    font-weight: bold;
+  }
+  + .woocommerce-Address {
+    margin-top: 12px;
+  }
+   .edit {
+    display: block;
+    width: 130px;
+    margin-left: auto;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+
+  @media (min-width: 768px) {
+    + .woocommerce-Address {
+      margin-top: 0;
+    }
+  }
+}
+
+.woocommerce-edit-address .woocommerce-MyAccount-content h3 {
+  display: none;
+}
+
+.woocommerce-address-fields {
+  max-width: 350px;
+  margin: 0 auto;
+
+  
+  button[name="save_address"] {
+    width: 100%;
+    max-width: 270px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 48px;
+    background: #ED6E33;
+    border-radius: 6px;
+    color: #fff;
+    margin: 28px auto 0;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    button[name="save_address"] {
+      margin-top: 48px;
+    }
+  }
+
+}
+
+
+
+.woocommerce-address-fields .woocommerce-address-fields__field-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  #billing_country_field {
+    display: none;
+  }
+
+  > p {
+    order: 10;
+  }
+
+  #shipping_first_name_field,
+  #shipping_last_name_field,
+  #shipping_company_field,
+  #billing_first_name_field,
+  #billing_last_name_field,
+  #billing_cpf_field {
+    order: 1;
+  }
+
+  #billing_phone_field,
+  #billing_cellphone_field,
+  #billing_email_field {
+    order: 5;
+  }
+
+  #shipping_country_field,
+  #billing_country_field {
+    display: none;
+  }
+
+  #shipping_first_name_field:before,
+  #billing_first_name_field:before {
+    content: 'Dados Pessoais';
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  #shipping_postcode_field:before,
+  #billing_postcode_field:before {
+    content: 'Endereço';
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+
+  @media (min-width: 1024px) {
+    #shipping_first_name_field:before,
+    #billing_first_name_field:before,
+    #shipping_postcode_field:before,
+    #billing_postcode_field:before {
+      font-size: 36px;
+      line-height: 44px;
+      margin-top: 48px;
+      margin-bottom: 24px;
+    }
+
+    #billing_first_name_field:before,
+    #shipping_first_name_field:before {
+      margin-top: 0;
+    }
+  }
+}

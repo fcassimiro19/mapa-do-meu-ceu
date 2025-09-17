@@ -1,0 +1,90 @@
+@media (max-width: 767px) {
+  .woocommerce-MyAccount-navigation ul {
+    padding: 0 16px;
+  }
+  .woocommerce-account:not(.woocommerce-edit-address):not(.woocommerce-edit-account):not(.woocommerce-downloads):not(.woocommerce-orders):not(.woocommerce-view-order):not(.woocommerce-favoritos):not(.woocommerce-cupons) .woocommerce-MyAccount-navigation > ul {
+
+    > .woocommerce-MyAccount-navigation-link {
+      margin-bottom: 13px;
+      text-align: center;
+    }
+    > .woocommerce-MyAccount-navigation-link > a {
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #fff;
+      background: $secondary;
+      border: 2px solid $secondary;
+      padding: 13px;
+      border-radius: 6px;
+    }
+
+    > .woocommerce-MyAccount-navigation-link--dashboard {
+      text-align: center;
+      pointer-events: none;
+      margin-bottom: 15px;
+    }
+    > .woocommerce-MyAccount-navigation-link--dashboard > a {
+      text-transform: initial;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #333333;
+      background: none;
+      border: none;
+    }
+
+    > .woocommerce-MyAccount-navigation-link--customer-logout {
+      margin-top: 12px;
+    }
+    > .woocommerce-MyAccount-navigation-link--customer-logout > a {
+      color: $secondary;
+      background: #fff;
+    }
+
+  }
+}
+
+
+@media (max-width: 767px) {
+  .woocommerce-account .woocommerce-MyAccount-content {
+    display: none;
+  }
+
+  .woocommerce-account.woocommerce-cupons,
+  .woocommerce-account.woocommerce-favoritos,
+  .woocommerce-account.woocommerce-edit-address,
+  .woocommerce-account.woocommerce-edit-account,
+  .woocommerce-account.woocommerce-orders,
+  .woocommerce-account.woocommerce-downloads,
+  .woocommerce-account.woocommerce-view-order {
+
+    > .woocommerce {
+      margin-top: 18px;
+    }
+
+    .woocommerce-MyAccount-content {
+      display: block;
+    }
+
+    .woocommerce-MyAccount-navigation li {
+      display: none;
+    }
+    .woocommerce-MyAccount-navigation li.woocommerce-MyAccount-navigation-link--dashboard,
+    .woocommerce-MyAccount-navigation li.is-active {
+      display: inline-block;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .woocommerce-MyAccount-navigation li.is-active {
+      background-image: url('assets/icons/arrow-right.svg');
+      background-size: 6px;
+      background-repeat: no-repeat;
+      background-position: left;
+      padding-left: 10px;
+    }
+  }
+}

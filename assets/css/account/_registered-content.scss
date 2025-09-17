@@ -1,0 +1,24 @@
+.woocommerce-MyAccount-new-user {
+  display: none;
+}
+
+.ba-registered .woocommerce-MyAccount-new-user {
+  display: block;
+}
+
+.ba-registered > .woocommerce > .woocommerce-MyAccount-navigation,
+.ba-registered > .woocommerce > .woocommerce-MyAccount-content {
+  display: none;
+}
+
+.ba-registered > .woocommerce {
+  max-width: none;
+
+  .search-notfounded .text {
+    max-width: 736px;
+  }
+
+  .search-notfounded .button-default {
+    width: 239px;
+  }
+}

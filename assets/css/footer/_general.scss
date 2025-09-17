@@ -1,0 +1,115 @@
+.main-footer {
+  background: $secondary;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  @media (min-width: 1024px) {
+    padding-bottom: 32px;
+  }
+}
+
+
+.main-footer > .wrapper-1310 > .site-map {
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto 24px;
+  > .list {
+    width: 160px;
+    margin-bottom: 48px;
+  }
+  > .list.-security-seals > li {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    img{
+        max-height: 95px;
+        &:first-child{
+            margin-right: 10px;
+        }
+    }
+  }
+  > .list.-security-seals > li.-google-seal {
+    display: block;
+  }
+  > .list > li.title {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  > .list > li > a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+  }
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+    margin-right: 0;
+    > .list {
+      width: 25%;
+      margin-bottom: 24px;
+    }
+    .list.-payment-methods {
+      width: 300px;
+    }
+    > .list > li {
+      margin-bottom: 16px;
+    }
+    > .list > li > a {
+      line-height: 17px;
+    }
+  }
+}
+
+.main-footer > .wrapper-1310 > .site-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  border-top: 1px solid #fff;
+  padding-top: 32px;
+  > small {
+    display: block;
+    margin-top: 32px;
+    order: 2;
+    color: #fff;
+  }
+  > img {
+    display: block;
+    max-width: 180px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    > small {
+      order: 1;
+      margin: 0;
+    }
+    > img {
+      margin: 0;
+      order: 2;
+    }
+  }
+}
+
+.under-footer {
+  padding: 0 0 48px;
+  background: #F6F6F6;
+  strong {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+  }
+}

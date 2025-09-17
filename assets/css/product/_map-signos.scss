@@ -1,0 +1,308 @@
+.signos-map {
+
+  .map-content-scaled:before {
+    border: none !important
+  }
+} 
+
+#signos-kids-map-page .-bg-stars,
+#signos-map-page .-bg-stars {
+
+  &[data-bg="asphalt"] .map-content-scaled {
+    background: #182831;
+  }
+  &[data-bg="asphalt"] p {
+    color: #fff;
+  }
+  &[data-bg="asphalt"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-asphalt.png");
+  }
+  &[data-bg="nautical"] .map-content-scaled {
+    background: #FDF7EF;
+  }
+  &[data-bg="nautical"] p {
+    color: #172731;
+  }
+  &[data-bg="nautical"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-nautical.png");
+  }
+  &[data-bg="modern"] .map-content-scaled {
+    background: #fff;
+  }
+  &[data-bg="modern"] p {
+    color: #000;
+  }
+  &[data-bg="modern"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-modern.png");
+    border: 1px solid
+  }
+  &[data-bg="cloud"] .map-content-scaled {
+    background: #A1AEB8;
+  }
+  &[data-bg="cloud"] p {
+    color: #fff;
+  }
+  &[data-bg="cloud"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-cloud.png");
+  }
+  &[data-bg="bright"] .map-content-scaled {
+    background: #fff; 
+  }
+  &[data-bg="bright"] p {
+    color: #000;
+  }
+  &[data-bg="bright"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-bright.png");
+  }
+  &[data-bg="dark"] .map-content-scaled {
+    background: #222;
+  }
+  &[data-bg="dark"] p {
+    color: #fff;
+  }
+  &[data-bg="dark"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-dark.png");
+  }
+  &[data-bg="gaia"] .map-content-scaled {
+    background: #F9F1E7;
+  }
+  &[data-bg="gaia"]  p {
+    color: #172731;
+  }
+  &[data-bg="gaia"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-gaia.png");
+  }
+  &[data-bg="kids1"] .map-content-scaled {
+    background: #85bef5;
+  }
+  &[data-bg="kids2"] .map-content-scaled {
+    background: #e59eb0;
+  }
+  &[data-bg="kids3"] .map-content-scaled {
+    background: #555450;
+  }
+  &[data-bg="kids1"] p,
+  &[data-bg="kids2"] p{
+    color: #fff;
+  }
+  &[data-bg="kids3"] p {
+    color: #666664;
+  }
+  &[data-bg="kids3"] .map-content-scaled {
+    background: #fcfae3;
+  }
+  &[data-bg="kids1"] #map-planet-simulator:before,
+  &[data-bg="kids2"] #map-planet-simulator:before,
+  &[data-bg="kids3"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-light.svg");
+  }
+  &[data-bg="kids4"] #map-planet-simulator:before {
+    background-image:url("assets/images/bg-stars-kids4.svg");
+  }
+  &[data-bg="kids4"] p {
+    color: #89a596;
+  }
+  &[data-bg="kids4"] .map-content-scaled {
+    background: #fff6ed;
+  }
+
+  #map-planet-simulator {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+    height: 375px;
+  }
+  #map-planet-simulator:before {
+    top: 0 !important;
+    left: 0 !important;
+  }
+  #map-planet-simulator img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .map-text {
+    top: 470px !important;
+    .text-signo {
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+    .text-signo-info {
+      font-size: 13px;
+      line-height: 13px;
+      margin-bottom: 0 !important;
+      letter-spacing: 3px;
+    }
+    .text-signo-data {
+      letter-spacing: 3px;
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 10px;
+    }
+  }
+}
+
+#signos-kids-map-page .-bg-stars .map-text .text-signo {
+  margin-bottom: 0px;
+}
+
+#signos-kids-map-page .-bg-stars .map-text .text-signo {
+  font-size: 26px;
+}
+
+#signos-kids-map-page .-bg-stars #map-planet-simulator {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 440px;
+  height: 440px;
+  &:before {
+    width: 440px;
+    height: 440px;
+  }
+  img {
+    max-height: 280px;
+    z-index: 1;
+  }
+}
+
+.-ilustration-simbolo,
+.-ilustration-constelacao {
+  display: none;
+}
+
+[data-ilustration="simbolo"] .-ilustration-simbolo {
+  display: flex;
+}
+[data-ilustration="constelacao"] .-ilustration-constelacao {
+  display: flex;
+}
+
+.signos-map.map-content.-custom2 .map-text p {
+  max-width: 440px;
+}
+
+#signos-kids-map-page .signos-map.map-content.-custom2 .map-text p.preview-message {
+  max-width: 220px;
+}
+
+.signos-map.-custom-font-family {
+  .text-signo {
+    font-family: "WindSong";
+  }
+  .text-signo-info,
+  .text-signo-data {
+    font-family: serif;
+  }
+}
+
+#signos-kids-map-page #map-planet-simulator {
+  position: relative;
+  i {
+    display: none;
+    position: absolute;
+    width: 40px;
+  }
+  i:nth-child(1) {
+    top: 20px;
+    left: 180px;
+    width: 20px;
+  }
+  i:nth-child(2) {
+    top: 100px;
+    left: 45px;
+    width: 25px;
+    height: 25px;
+  }
+  i:nth-child(3) {
+    top: 200px;
+    left: 13px;
+    width: 30px;
+  }
+  i:nth-child(4) {
+    bottom: 25px;
+    left: 121px;
+    width: 20px;
+  }
+  i:nth-child(5) {
+    top: 30px;
+    right: 145px;
+    width: 25px;
+  }
+  i:nth-child(6) {
+    top: 125px;
+    right: 31px;
+    width: 25px;
+    height: 25px;
+  }
+  i:nth-child(7) {
+    bottom: 60px;
+    right: 85px;
+    width: 20px;
+    height: 20px;
+  }
+  i:nth-child(8) {
+    bottom: 23px;
+    right: 150px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+#signos-kids-map-page .map-content.-bg-stars-kids[data-active-bg-stars="bg-stars-kids-1"] #map-planet-simulator i {
+  display: block;
+  z-index: 1;
+}
+
+#signos-kids-map-page #map-planet-simulator:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  border: 3px solid transparent;
+  border-radius: 50%;
+}
+
+#signos-kids-map-page .-bg-stars .map-text {
+  top: 470px;
+  height: 160px;
+  .preview-message {
+    // max-height: 60px;
+    // overflow: hidden;
+  }
+}
+
+#signos-kids-map-page .-bg-stars[data-bg="kids1"] #map-planet-simulator:after {
+  border-color: #85bef5;
+}
+
+#signos-kids-map-page .-bg-stars[data-bg="kids2"] #map-planet-simulator:after {
+  border-color: #e59eb0
+}
+
+#signos-kids-map-page .-bg-stars[data-bg="kids3"] #map-planet-simulator:after {
+  // border-color: #555450
+  border-color: none;
+}
+
+#signos-kids-map-page .-bg-stars[data-bg="kids4"] #map-planet-simulator:after {
+  border-color: #fff6ed;
+}
+
+#signos-kids-map-page .-bg-stars[data-active-bg-stars="bg-stars-kids-2"] #map-planet-simulator:after {
+  background-image: url('assets/images/bg-stars-kids-2.png');
+  background-size: contain;
+}

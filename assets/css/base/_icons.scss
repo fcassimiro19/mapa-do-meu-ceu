@@ -1,0 +1,116 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-user {
+  width: 28px;
+  height: 28px;
+  background-image: url("assets/icons/user.svg");
+}
+
+.icon-cart {
+  width: 21px;
+  height: 19px;
+  background-image: url("assets/icons/cart.svg");
+  @media (min-width: 1024px) {
+    width: 28px;
+    height: 25px;
+  }
+}
+
+.icon-arrow-down {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/arrow-down.svg");
+}
+
+.icon-menu {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/menu.svg");
+}
+
+.icon-close-round {
+  width: 44px;
+  height: 44px;
+  background-image: url("assets/icons/close-round.svg");
+}
+
+.icon-close-round-red {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/close-round-red.svg");
+}
+
+.icon-whatsapp {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/whatsapp.svg");
+  vertical-align: middle;
+}
+
+.icon-instagram {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/instagram.svg");
+  vertical-align: middle;
+}
+
+.icon-twitter {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/twitter.svg");
+  vertical-align: middle;
+}
+
+.icon-facebook {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/icons/facebook.svg");
+  vertical-align: middle;
+}
+
+.icon-youtube {
+  width: 30px;
+  height: 30px;
+  background-image: url("assets/icons/youtube.svg");
+  vertical-align: middle;
+}
+
+.icon-star {
+  width: 30px;
+  height: 30px;
+  background-image: url("assets/icons/star.svg");
+  vertical-align: middle;
+}
+
+.icon-star-half {
+  width: 30px;
+  height: 30px;
+  background-image: url("assets/icons/star-half.svg");
+  vertical-align: middle;
+}
+
+.icon-info {
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/icons/information.svg");
+  vertical-align: middle;
+}
+
+.icon-card {
+  width: 15px;
+  height: 15px;
+  background-image: url("assets/icons/credit-card.svg");
+  vertical-align: middle;
+}
+
+.icon-zoom-in {
+  width: 40px;
+  height: 40px;
+  background-image: url("assets/icons/zoom-in.svg");
+  vertical-align: middle;
+}

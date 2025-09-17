@@ -1,0 +1,347 @@
+body{
+	padding-top: 195px;
+	@media (min-width: 1024px) {
+		padding-top: 0px;
+	}
+
+	&.hide-header-and-footer {
+		padding-top: 0 !important;
+	}
+}
+.main-header {
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+	background: #fff;
+	z-index: 100;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	> .google-auto-placed {
+		display: none !important;
+	}
+	@media (min-width: 1024px) {
+		position: relative;
+	}
+	
+	#box-message-support{
+		background-color: #F6F6F6;
+		width: 360px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 43px;
+		font-size: 14px;
+		color: #545454;
+		background-image: url('assets/icons/icon-support.svg');
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-position-x: 12px;
+		background-size: 26px;
+		padding-left: 15px;
+		p,
+		a{
+			font-size: 14px;
+			line-height: 20px;
+			font-weight: bold;
+		}
+	}
+}
+
+.main-header > .over-header {
+	background: $secondary;
+	> .wrapper-1310 {
+		display: flex;
+		justify-content: center;
+		padding: 5px;
+		color: #fff;
+	}
+	a {
+		color: #fff;
+	}
+
+	@media (min-width: 1024px) {
+		> .wrapper-1310 {
+			justify-content: space-between;
+			padding: 5px 0;
+		}
+	}
+}
+
+.main-header > .wrapper-1310 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+	padding: 20px 16px 20px 16px;
+	transition: all .3s;
+  > .logo {
+	min-width: 106px;
+	width: 106px;
+	height: 70px;
+	order: 2;
+	transition: all .3s;
+  }
+  > .logo > * {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url("assets/images/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	margin: 0;
+  }
+
+  > .search-block {
+	width: 100%;
+	order: 3;
+	margin-top: 10px;
+	z-index: 101;
+	transition: all .3s;
+  }
+
+  > .account-block {
+	order: 2;
+  }
+
+  > .account-block .item-cart {
+	position: relative;
+  }
+
+  > .account-block .item-cart .carrinho-count {
+	position: absolute;
+	top: -16px;
+	right: 2px;
+	background: $primary;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	color: #fff;
+	text-align: center;
+	line-height: 22px;
+  }
+
+  @media (min-width: 1024px) {
+	padding: 14px 16px;
+	flex-wrap: nowrap;
+	> .logo {
+	  width: 166px;
+	  min-width: 166px;
+	  height: 104px;
+	  order: unset;
+	}
+	> .logo > * {
+	  background-image: url("assets/images/logo.png");
+	}
+	.search-block {
+	  width: calc(100% - 630px);
+	  margin-top: 0;
+	  margin-left: 70px;
+	  order: 2;
+	}
+	> .account-block {
+	  order: 3;
+	}
+  }
+}
+
+.account-block .item-account {
+  position: relative;
+}
+
+.account-block .item-account i.icon-user {
+  position: absolute;
+  top: 4px;
+  left: -40px;
+}
+
+.account-block .item-account i.icon-arrow-right2 {
+  margin-left: 5px;
+}
+
+.account-block .item-account span {
+  display: block;
+  text-transform: initial;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: $secondary;
+}
+
+.account-block > a {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $secondary;
+}
+
+.account-block .item-menu i,
+.account-block .item-cart i {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .account-block {
+	display: flex;
+	align-items: center;
+	padding-left: 40px;
+  }
+  .account-block .item-account 
+  .account-block > a {
+	font-size: 14px;
+	line-height: 17px;
+  }
+  .account-block > a + a {
+	margin-left: 30px;
+  }
+  .item-account.-logged > span {
+	color: $secondary;
+  }
+  .account-block .item-account i.icon-user {
+	top: 50%;
+	transform: translateY(-50%)
+  }
+}
+.main-header .wrapper-1310 a.btn-header-calc-shipping{
+	position: absolute;
+	top: 90px;
+	margin-left: 330px;
+	color: #757575;
+	&:hover{
+	  color: #01b6ae;
+	}
+	.right-icon-mobile-calc-shipping{
+	  display: none;
+	}
+}
+@media (max-width: 800px) {
+  .main-header .wrapper-1310 a.btn-header-calc-shipping{
+	top: 115px;
+	margin-left: -15px;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px;
+	color: #757575;
+	padding: 5px 15px 5px 15px;
+	-webkit-box-shadow: 0px 11px 10px 0px rgba(0, 0, 0, 0.12);
+	box-shadow:0px 11px 10px 0px rgba(0, 0, 0, 0.12);
+	&:hover{
+	  color: #01b6ae;
+	}
+	.right-icon-mobile-calc-shipping{
+	  display: block;
+	  position: absolute;
+	  left: 92%;
+	  top: 9px;
+	}
+  }
+}
+#calc_shipping_modal{
+  .modal-content{
+	border: none;
+  }
+  .modal-header{
+	border: none;
+	border-radius: 5px;
+	padding-bottom: 0;
+	padding-left: 86px;
+	padding-right: 60px;
+  }
+  .modal-body{
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-bottom: 0;
+	#shipping_calc_any_page_country_field{
+	  display: none;
+	}
+	#shipping_calc_any_page_postcode_field{
+	  #shipping_calc_any_page_postcode{
+		width: 65%;
+		margin-right: 0;
+	  }
+	  button{
+		width: 30%;
+	  }
+	}
+	#shipping_calc_any_page{
+	  background-color: #F6F6F6;
+	  padding-left: 35px;
+	  padding-right: 35px;
+	  padding-top: 35px;
+	  margin: 30px 0;
+	}
+	#shipping_calc_any_page_loading img{
+	  width: 70px;
+	  height: 70px;
+	}
+  }
+  
+  .modal-title,.sub-title-modal{
+	width: 100%;
+	text-align: center;
+  }
+  .sub-title-modal{
+	margin-bottom: 0;
+	font-size: 13px;
+  }
+  
+}
+@media (max-width: 800px) {
+  #calc_shipping_modal{
+	.modal-dialog{
+	  margin: 0;
+	}
+	.modal-content{
+	  height: 100%;
+	  padding: 0;
+	  margin: 0;
+	}
+	.modal-header{
+	  padding-left: 8px;
+	  padding-right: 8px;
+	  top: 100px;
+	  position: relative;
+	  .close{
+		position: absolute;
+		margin-left: 10px;
+		right: 20px;
+		top: 0px;
+	  }
+	}
+	.modal-body{
+	  padding-left: 0px;
+	  padding-right: 0px;
+	  padding-bottom: 0;
+	  top: 90px;
+	  #shipping_calc_any_page_postcode_field{
+		#shipping_calc_any_page_postcode{
+		  width: 65%;
+		}
+		button{
+		  width: 33%;
+		}
+	  }
+	}    
+  }
+}
+
+body.-scroll {
+	@media (max-width: 1023px) {
+		.main-header > .wrapper-1310 {
+			padding: 10px 16px 10px 16px;
+			transition: all .3s;
+			.logo {
+				min-width: 75px;
+				width: 75px;
+				height: 49px;
+				transition: all .3s;
+			}
+			> .search-block input {
+				height:35px;
+			}
+		}
+	}
+}

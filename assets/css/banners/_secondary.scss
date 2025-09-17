@@ -1,0 +1,116 @@
+.secondary-banner {
+  // display: flex;
+  // flex-direction: column;
+  margin-bottom: 40px;
+
+  .item {
+    position: relative;
+    display: block;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 10px;
+    > .-text {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      padding: 20px;
+      strong {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 32px;
+        line-height: 38px;
+      }
+      p {
+        display: none;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+  .item:first-child {
+    margin-top: 0;
+  }
+  > .item-group {
+    margin-top: 10px;
+  }
+
+  .newsletter-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 6px;
+    background: $secondary;
+    margin-top: 15px;
+    strong {
+      text-transform: uppercase;
+      font-size: 24px;
+      line-height: 30px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      input[type="text"] {
+        width: calc(100% - 120px);
+      }
+      input[type="submit"] {
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      margin-top: 0;
+      > .-text p {
+        display: block;
+      }
+    }
+    > .item:first-child {
+      min-height: 648px;
+      max-height: 648px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    > .item-group {
+      margin-top: 0;
+    }
+
+    > .item-group,
+    > .item:first-child {
+      width: 49.5%;
+      margin-bottom: 10px;
+    }
+
+    > .item-group > .item {
+      height: 319px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    > .item-group > .item + .item {
+      margin-top: 10px;
+    }
+
+    .newsletter-banner {
+      flex-direction: row;
+      strong {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

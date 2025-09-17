@@ -1,0 +1,45 @@
+.card-banners {
+	display: block;
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px;
+	margin: 40px -10px;
+	.item + .item {
+		margin-left: 15px;
+	}
+	.item {
+		display: flex;
+		align-items: center;
+		padding-left: 5px;
+	}
+	.item > img {
+		display: block;
+		height: 40px;
+		max-height: 40px;
+		margin-right: 10px;
+	}
+	.item > span {
+		display: block;
+		font-size: 14px;
+		line-height: 14px;
+		font-weight: bold;
+		max-width: 100px;
+		min-width: 70px;
+		color: #848484;
+	}
+
+	@media (min-width: 1024px) {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		max-width: 1310px;
+		margin: 40px auto;
+		.item + .item {
+			margin-left: 0;
+		}
+		.item > span {
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+}

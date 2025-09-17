@@ -1,0 +1,9 @@
+import './_controls';
+import './_general';
+import './_mapa-custom';
+import './_mapa-das-estrelas';
+import './_mapa-dos-planetas';
+import './_mapa-signos';
+import './_mapa-signos-kids';
+import './_pingente-das-estrelas';
+import './_pingente-dos-planetas';

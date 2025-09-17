@@ -1,0 +1,356 @@
+.woocommerce-page.woocommerce-order-received{
+    // margin: 60px; 
+    
+    .thankyou-content{
+        margin: 0 10px 100px;
+    }
+
+    .main-order-received{
+        background: #F6F6F6;
+        padding: 0px 23px;
+        padding-bottom: 20px;
+        .woocommerce-notice{
+            margin-left: -23px;
+            margin-right: -23px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 12px 12px 0px 0px;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 25px;
+            padding: 17px 0;
+            &--success{
+                background-color: #2DCC89;
+            }
+            &--failed{
+                background-color: #EC496D;
+            }
+        }
+        .woocommerce-order{
+            &--id{
+                color: #01B6AE;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 44px;
+            }
+            &--date{
+                font-weight: 600;
+                font-size: 18px;
+                line-height:26px;
+                color: #605E5E;
+                margin-top: 10px;
+                margin-bottom: 24px;
+            }
+            &--billing-shipping{
+                &--title{
+                    color: #333333;
+                    font-size: 20px;
+                    line-height: 24px;
+                    font-weight: bold;
+                }
+                &--address{
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height:25px;
+                    color: #757575;
+                }
+            }
+            &--resume{
+                margin-top: 50px;
+
+                .order-status-block{
+                    border-top: 1px solid white;
+                    border-bottom: 1px solid white;
+                    margin-top: 30px;
+                }
+
+                &--notice-important{
+                    color: #757575;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+        .thankyou-payment-method {
+            background: #EEEEEE;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+
+            > strong {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            > p {
+                margin-top: 16px;
+            }
+
+            .bank-info-content {
+                position: relative;
+                padding-bottom: 130px;
+
+                input {
+                    display: none;
+                }
+                .bank-info--details-block {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%
+                }
+                .bank-info--details {
+                    display: none;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 29px;
+                    color: #545454;
+                }
+                .--pix {
+                    display: inline-block;
+                    margin-top: 8px;
+                    background-size: 20px;
+                    background-position-y: center;
+                    background-position-x: left;
+                    background-image: url('assets/icons/pix.svg');
+                    background-repeat: no-repeat;
+                    padding-left: 30px;
+                }
+
+                input:checked + .bank-info--details {
+                    display: block;
+                }
+            }
+
+            .bank-info-block.-active {
+                background: #fff !important;
+                border-color: #ED6E33;
+            }
+            .bank-info-block {
+                max-width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 85px;
+                border-radius: 6px;
+                background: #E8E8E8;
+                border: 1px solid transparent;
+                margin: 35px 15px 15px;
+                cursor: pointer;
+
+                .bank-info {
+                    &--image {
+                        width: 34px;
+                        height: 34px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                    &--image-ITAUBRSP { //Itaú
+                        background-image: url('assets/images/itau.png');
+                    }
+                    &--image-BBDEBRSPSPO { //Bradesco
+                        background-image: url('assets/images/bradesco.png');
+                    }
+                    &--image-BSCHBRSP { //Santander
+                        background-image: url('assets/images/santander.png');
+                    }
+                }
+
+            }
+
+             @media (max-width: 768px) {
+                    
+                .bank-info-content {
+                    justify-content: center;
+
+                    .--pix {
+                        margin-top: 15px;
+                        background-size: 15px;
+                        background-position-y: 2px;
+                        background-position-x: 38%;
+                    }
+                }
+
+                .bank-info-block {
+                    max-width: 85px;
+                    margin: 35px 5px 5px;
+                }
+            }
+
+            &--button {
+                max-width: 474px;
+                padding: 15px;
+                margin-top: 34px;
+            }
+
+            .paghiper-info-block {
+                max-width: 564px;
+                margin: 16px auto 0;
+
+                .woo_paghiper_digitable_line {
+                    margin-bottom: 20px !important;
+                    > p {
+                        display: none;
+                    }
+                }
+                > .woocommerce-message {
+                    display: block;
+                    font-size: 0;
+
+                    a {
+                        display: block;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    
+                }
+
+                > p {
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            &--failed {
+                > strong {
+                    display: block;
+                    max-width: 658px;
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin: 0 auto;
+                }
+                > p {
+                    span {
+                        display: inline-block;
+                        font-weight: bold;
+                        margin: 0 20px;
+                    }
+                    a {
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+                .pay {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .checkout-page{
+            &__main-form{
+                &__review{
+
+                    &__items-table{
+                        .product-total{
+                            font-size: 14px;
+                        }
+                    }
+
+                    .shipping_method{
+                        .woocommerce-Price-amount{
+                            &.amount{
+                                float: right;
+                                font-size: 17px;
+                                font-weight: 600;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 1024px) {
+            padding: 0 60px;
+
+            .woocommerce-notice {
+                margin-left: -45px;
+	            margin-right: -45px;
+            }
+        }
+    }
+
+}
+
+.ty-status-block {
+    position: relative;
+    background: #E2F2EB;
+    border: 1px solid #2DCC89;
+    border-radius: 8px;
+    padding: 10px 10px 10px 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0D6741;
+    &:before {
+        content: '';
+        display: block;
+        width:24px;
+        height: 24px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        background-image: url('assets/icons/status-approved.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    strong {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 3px;
+    }
+    p {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    &--on-hold {
+        border-color: #ED6E33;
+        background: #F5E8E3;
+        color: #9F3D10
+    }
+    &--on-hold:before {
+        background-image: url('assets/icons/info.svg');
+    }
+
+    &--failed {
+        border-color: #EC496D;
+        background: #F5E5E8;
+        color: #7B1310
+    }
+    &--failed:before {
+        background-image: url('assets/icons/status-refused.svg');
+    }
+
+    &--info {
+        border-color: #BED1FF;
+        background: #F0F4FF;
+        color: #253F82;
+
+        p {
+            font-weight: 600;
+            line-height:24px;
+        }
+        a {
+            font-weight: bold;
+        }
+    }
+    &--info:before {
+        background-image: url('assets/icons/info-blue.svg');
+        opacity: 0.8;
+    }
+}

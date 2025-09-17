@@ -1,0 +1,572 @@
+:root {
+  --selection-color: #fff;
+  --border-size: 5px;
+  --translate: 0;
+}
+
+.map-page,
+.map-page body {
+  overflow: hidden;
+  min-height: unset;
+}
+
+.map-canvas,
+.map-placeholder {
+  display: none;
+  max-width: 500px !important;
+  width:90%;
+  max-height: 90%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.map-container {
+  overflow: hidden;
+	display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  .label-default,
+  .switch-group > span,
+  #control-panel input,
+  #control-panel label {
+    font-weight: 400;
+    font-size: 3.93vw;
+    letter-spacing: 0.27vw;
+  }
+
+  > form {
+    display: none;
+  }
+
+  #mapSnapshotBlock {
+    position: absolute;
+    // opacity: 0;
+    pointer-events: none;
+
+    transform: scale(0.3);
+	  margin-top: -250px;
+
+    @media (min-width: 768px) {
+      transform: scale(0.6);
+	    margin-top: -100px;
+    }
+
+    @media (min-width: 1024px) {
+      transform: scale(1);
+	    margin-top: 0;
+    }
+    #mapSnapshot {
+      width: 500px;
+      height: 690px;
+    }
+  }
+
+  #preview {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 20px;
+    background-image: url('assets/images/map-bg-v2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    .modal-trigger {
+      position: absolute;
+      bottom: 25px;
+      right: 5px;
+    }
+    &.-loading + #control-panel {
+      pointer-events: none;
+    }
+    @media (max-width: 767px) {
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      flex: 1;
+      width: 100%;
+      min-height: 35vh;
+      height: 35vh;
+    }
+  }
+
+  #control-panel {
+    @media (max-width: 767px) {
+      background: white;
+      box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.2);
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      position: relative;
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      height: 65vh;
+      margin-top: -10px;
+    }
+
+    &[data-active="1"] {
+      .control-panel-menu button:nth-child(1) {
+        background: $primary;
+        color: #fff;
+      }
+      .control-panel-items {
+        margin-left: 0;
+      }
+    }
+
+    &[data-active="2"] {
+      .control-panel-menu button:nth-child(2) {
+        background: $primary;
+        color: #fff;
+      }
+      .control-panel-items {
+        margin-left: -100vw;
+      }
+    }
+
+    &[data-active="3"] {
+      .control-panel-menu button:nth-child(3) {
+        background: $primary;
+        color: #fff;
+      }
+      .control-panel-items {
+        margin-left: -200vw;
+      }
+    }
+
+    &[data-active="4"] {
+      .control-panel-menu button:nth-child(4) {
+        background: $primary;
+        color: #fff;
+      }
+      .control-panel-items {
+        margin-left: -300vw;
+      }
+    }
+
+    &[data-active="5"] {
+      .control-panel-menu button:nth-child(5) {
+        background: $primary;
+        color: #fff;
+      }
+      .control-panel-items {
+        margin-left: -400vw;
+      }
+    }
+  }
+
+  .control-panel-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid #cacaca;
+    background: #e2dfdf;
+  }
+
+  .control-panel-menu > button {
+    flex: 1 1 auto;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+
+    @media (max-width: 767px) {
+      height: 12.86vw;
+      line-height: 12.86vw;
+      font-size: 3.5vw;
+      letter-spacing: 0.48vw;
+    }
+  }
+
+  .control-panel-items {
+    overflow: hidden;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    position: relative;
+    transition: margin-left 0.5s;
+    background: #f0f0f0;
+    &.-pdf .border-type-block,
+    &.-azulejo .border-type-block {
+      display: none;
+    }
+    @media (min-width: 1024px) {
+      max-height: 100vh;
+      min-height: 100vh;
+    }
+  }
+  .control-panel-items > .item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3vw;
+    overflow-y: scroll;
+    &:nth-child(1) {
+      left: 0;
+    }
+    &:nth-child(2) {
+      left: 100vw;
+    }
+    &:nth-child(3) {
+      left: 200vw;
+    }
+    &:nth-child(4) {
+      left: 300vw;
+    }
+    &:nth-child(5) {
+      left: 400vw;
+    }
+
+    @media (max-width: 1023px) {
+      padding-bottom: 100px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 125px;
+    }
+  }
+  .buy-button,
+  .control-panel-items > .item .next {
+    background: $primary;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    @media (max-width: 767px) {
+      font-size: 5.36vw;
+      min-height: 11.96vw;
+      max-height: 11.96vw;
+      letter-spacing: 0.57vw;
+    }
+  }
+  .control-panel-items > .item .item-block {
+    margin-bottom: 15px;
+  }
+  .control-panel-items > .item .item-block > input[type="email"],
+  .control-panel-items > .item .item-block > input[type="text"] {
+    width: 100%;
+  }
+  .control-panel-items > .item .item-block > label {
+    display: block;
+    color: #000;
+    margin-bottom: 2vw;
+  }
+  .control-panel-items > .item .item-block.hide-hour-block {
+    .switch-group > span {
+      display: block;
+      color: #000;
+    }
+  }
+  .control-panel-items > .item .item-block .map-color-item {
+    background-image: url("assets/images/stars.png");
+    &.-planet {
+      background-image: url("assets/images/orbit-black.png");
+      height: 80px;
+	    background-size: 60px !important;
+    }
+    &.-planet[for="map-color-black"] {
+      background-image: url("assets/images/orbit-white.png");
+    }
+  }
+  .control-panel-items > .item .item-block .border-item {
+    background-size: 18vw;
+  }
+  .control-panel-items > .item .item-block .sky-details {
+    background-size: 7vw;
+  }
+  .control-panel-items > .item .item-block input:checked + .map-size-item {
+    background: #656565;
+    color: #fff;
+  }
+  .control-panel-items > .item .item-block .map-size-item {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: unset;
+    font-size: 3vw;
+    padding: 3vw 6vw;
+    background: #fff;
+    border: none;
+    color: #000;
+    margin-bottom: 10px;
+    strong {
+      font-weight: bold;
+    }
+  }
+  .control-panel-items > .item .item-block .map-frame-color-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16vw;
+    color: #000;
+    text-transform: uppercase;
+    border-color: transparent;
+
+    &--wood {
+      display: none;
+    }
+  }
+
+  .control-panel-items.-premium>.item .item-block .map-frame-color-item {
+    &--beige {
+      display: none;
+    }
+    &--wood {
+      display: flex;
+    }
+  }
+  .control-panel-items > .item .item-block input:checked + .map-frame-color-item {
+    border-color: #f7842d
+  }
+  .control-panel-items > .item .item-block .layout-map {
+    padding: 0 !important;
+    width: 87px !important;
+    height: 130px;
+    margin-right: 20px !important;
+    box-sizing: border-box;
+    background-size: auto;
+  }
+
+  .finish-block .item-block {
+    margin-bottom: 15px;
+  }
+  .finish-block > .price-block-info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .finish-block > .price-block-info > .-price {
+    font-size: 5vw;
+    line-height: 8vw;
+    font-weight: bold;
+    color: $primary
+  }
+  
+  .finish-block > .price-block-info #current-price {
+    font-size: 8vw;
+    line-height: 10vw;
+    font-weight: bold;
+    color: $primary
+  }
+
+  #control-panel .control-panel-items > .item .next-block {
+    margin-top: 10px;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+
+    .label-default,
+    .switch-group > span,
+    #control-panel input,
+    #control-panel label {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 1px;
+    }
+    
+    #preview {
+      width: calc(100vw - 400px);
+      .preview-item {
+        padding: 20px;
+      }
+      .modal-trigger { 
+        right: unset;
+        left: 5px;
+      }
+    }
+    #control-panel {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: -2px 0px 4px 0 rgba(0,0,0,0.2);
+      overflow: hidden;
+      &[data-active="1"] {
+        .control-panel-items {
+          margin-left: 0;
+          .item:nth-child(1) .next-block {
+            display: block;
+          }
+        }
+      }
+      &[data-active="2"] {
+        .control-panel-items {
+          margin-left: -400px;
+          .item:nth-child(2) .next-block {
+            display: block;
+          }
+        }
+      }
+
+      &[data-active="3"] {
+        .control-panel-items {
+          margin-left: -800px;
+          .item:nth-child(3) .next-block {
+            display: block;
+          }
+        }
+      }
+
+      &[data-active="4"] {
+        .control-panel-items {
+          margin-left: -1200px;
+          .item:nth-child(4)  .next-block {
+            display: block;
+          }
+        }
+      }
+
+      &[data-active="5"] {
+        .control-panel-items {
+          margin-left: -1600px;
+          .item:nth-child(5) .next-block  {
+            display: block;
+          }
+        }
+      }
+    }
+    #control-panel .control-panel-menu > button {
+      height: 50px;
+      font-size: 20px;
+      list-style: none;
+      letter-spacing: 0;
+    }
+
+    #control-panel .control-panel-items {
+      overflow: hidden;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      position: relative;
+      transition: margin-left 0.5s;
+    }
+    #control-panel .control-panel-items > .item {
+      width: 400px;
+      justify-content: flex-start;
+      left: unset;
+      padding: 15px 15px 70px;
+      &:nth-child(1) {
+        margin-left: 0;
+      }
+      &:nth-child(2) {
+        margin-left: 400px;
+      }
+      &:nth-child(3) {
+        margin-left: 800px;
+      }
+      &:nth-child(4) {
+        margin-left: 1200px;
+      }
+      &:nth-child(5) {
+        margin-left: 1600px;
+      }
+    }
+    #control-panel .control-panel-items > .item .next-block {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 400px;
+      background: #f0f0f0;
+      padding: 15px;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    #control-panel .control-panel-items > .item .buy-button,
+    #control-panel .control-panel-items > .item .next {
+      height: 40px;
+    }
+    #control-panel .control-panel-items > .item .item-block > label {
+      margin-bottom: 10px;
+    }
+    #control-panel .control-panel-items > .item .item-block .map-color-item {
+      background-size: 80%
+    }
+    #control-panel .control-panel-items > .item .item-block .border-item {
+      background-size: 80%
+    }
+    #control-panel .control-panel-items > .item .item-block .map-size-item {
+      padding: 10px 15px;
+    }
+    #control-panel .control-panel-items > .item .item-block .map-frame-color-item {
+      height: 66px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    #control-panel .control-panel-items > .item .item-block .sky-details {
+      background-size: 70%;
+    }
+    .finish-block > .price-block-info > .-price {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    .finish-block > .price-block-info #current-price {
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    #preview .modal-trigger { 
+      display: none;
+    }
+  }
+}
+
+#control-panel input[type="text"],
+#control-panel input[type="email"],
+#control-panel textarea,
+#control-panel select {
+  background: #fff !important;
+  border: none !important;
+  border-radius: 4px !important;
+}
+
+#control-panel input[type="email"],
+#control-panel textarea {
+  width: 100%;
+  background: transparent;
+}
+
+
+.locations-results {
+  &.active li {
+    display: block;
+  }
+  li {
+    display: none;
+  }
+}
+
+
+body:not(.woocommerce-cart) .cart_item .variation,
+.variation-LinkdoPDF,
+.variation-LinkdoSVG {
+  display: none !important;
+}
+
+.modal-block #mapSnapshotBlock {
+  transform: scale(0.7) translate(-24%, -10%);
+  @media (min-width: 415px) {
+    transform: scale(0.7) translate(-17%, -10%);
+  }
+
+  @media (min-width: 768px) {
+    transform: scale(0.8) translate(10%, -10%);
+  }
+}

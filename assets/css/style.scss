@@ -1,0 +1,22 @@
+/*
+Theme Name: Mapa do Meu Céu
+Description: Mapa do Meu Céu
+Author: Mapa do Meu Céu
+Author URI: https://mapadomeuceu.com.br/
+Version: 1.0
+Text Domain: mapa-do-meu-ceu
+License: GNU General Public License
+License URI: licence/GPL.txt
+*/
+
+// @import "lib/index.scss";
+@import 'home/index.scss';
+@import 'base/index.scss';
+@import 'banners/index.scss';
+@import 'header/index.scss';
+@import 'product/index.scss';
+@import 'blog/index.scss';
+@import 'footer/index.scss';
+@import 'cart/index.scss';
+@import 'checkout/index.scss';
+@import 'account/index.scss';

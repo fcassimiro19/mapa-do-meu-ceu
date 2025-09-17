@@ -1,0 +1,36 @@
+#custom-map-page {
+  .map-content-scaled svg {
+    max-width: 450px;
+    height: 400px;
+    margin: 35px auto 0;
+    display: block;
+    transform: scale(.9);
+  }
+  .map-content-scaled img.svg {
+    display: none;
+  }
+  .map-content-scaled svg * {
+    fill: #fff;
+  }
+  .map-content-scaled svg * {
+    fill: var(--selection-color);
+  }
+
+  .map-content.-custom .map-content-scaled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .map-content.-custom svg {
+    margin: 0;
+    transform: scale(1.05);
+  }
+  .map-content .map-info .-title {
+    border: none
+  }
+
+  .map-content.-custom .map-info,
+  .map-content.-custom2 .map-info {
+    right: 0 !important;
+  }
+}

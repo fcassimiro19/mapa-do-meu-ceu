@@ -1,0 +1,102 @@
+#pwgc-balance-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#pwgc-balance-number-container {
+  display: flex;
+}
+
+#pwgc-redeem-gift-card-container #pwgc-redeem-button {
+  display: block;
+	width: 100%;
+	line-height: 12px;
+	margin-top: 10px;
+}
+
+#pwgc-balance-number-container input[type=text],
+#pwgc-redeem-form input[type=text] {
+  font-size: 16px;
+	background-color: #fff;
+	border: 1px solid #bdbdbd !important;
+	border-radius: 0;
+	box-shadow: none;
+	width: calc(100% - 90px) !important;
+	height: 45px;
+	padding: .5rem 1.75rem .5rem 1rem;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	transition: all .1s ease-out;
+  margin: 0;
+  border-radius: 4px;
+}
+
+#pwgc-balance-buttons #pwgc-balance-reload,
+#pwgc-balance-number-container input[type=submit],
+#pwgc-redeem-form input[type=submit] {
+  background: #fff;
+  color: #f67310;
+  border: 2px solid #f67310;
+  text-transform: uppercase;
+	font-size: 17px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+label[for="pwgc-redeem-gift-card-number"] {
+	// margin-bottom: -16px !important;
+}
+#pwgc-redeem-gift-card-number {
+	width: calc(100% - 155px) !important;
+	background: #fff !important;
+}
+
+#pwgc-apply-gift-card,
+#pwgc-redeem-button {
+  background: #131d63 !important;
+  color: #fff !important;
+  line-height: 24px;
+  margin-left: 8px;
+  border: none !important;
+}
+
+.woocommerce-checkout {
+  label[for="pwgc-redeem-gift-card-number"] {
+    margin-bottom: 5px !important;
+  }
+
+  #pwgc-redeem-form input[type=submit] {
+    width: auto;
+    background: #fff !important;
+    border: 1px solid #131d63 !important;
+    color: #131d63 !important;
+    font-weight: normal;
+    margin: 0 0 0 8px !important;
+    text-transform: capitalize;
+    font-size: 16px !important
+  }
+}
+
+#pwgc-balance-container {
+  #pwgc-balance-number {
+    height: 45px !important
+  }
+}
+
+#pwgc-redeem-gift-card-form {
+  order: -1;
+	background: #fff;
+
+  #pwgc-redeem-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    > label,
+    #pwgc-redeem-error {
+      width: 100%;
+    }
+  }
+}

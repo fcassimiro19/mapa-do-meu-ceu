@@ -1,0 +1,52 @@
+.woocommerce-notices-wrapper, .woocommerce-NoticeGroup {
+	margin-bottom: 20px;
+
+	&:empty {
+		margin-bottom: 0;
+	}
+
+	.woocommerce-message,
+	.woocommerce-info,
+	.woocommerce-error {
+		padding: 12px 32px;
+		font-size: 14px;
+		margin-bottom: 4px;
+		font-weight: 500;
+		line-height: 1.2em;
+		align-items: center;
+		border-radius: 4px;
+	
+		a {
+			text-decoration: underline;
+		}
+	}
+	
+	// .woocommerce-message { @include info($green, #EEFAEF); }
+	
+	// .woocommerce-info { @include info($orange, #FFF7EB); }
+	
+	// .woocommerce-error { @include info($red, #FFEDED); }
+
+	ul {
+
+		li {
+			margin-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+
+		.woocommerce-message,
+		.woocommerce-info,
+		.woocommerce-error {
+			padding: 10px;
+			border-left-width: 4px;
+			font-size: 12px;
+			border-radius: 4px;
+		}
+	}
+}

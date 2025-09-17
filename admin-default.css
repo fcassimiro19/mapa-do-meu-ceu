@@ -1,0 +1,23 @@
+.manage-column.column-mdmc_spotify,
+.column-mdmc_spotify {
+  max-width: 120px !important;
+	width: 120px !important;
+	box-sizing: border-box !important;
+  text-align: center;
+}
+
+.mdmc_spotify.column-mdmc_spotify {
+  text-align: center !important;
+}
+
+[class*="custom_product_type"] {
+  clear: both;
+} 
+
+.plugins #the-list [data-slug="search-analytics"] {
+  display: none;
+}
+
+.dashboard_page_search-analytics-admin-includes-class-stats .mwtsa-col-2 {
+  display: none;
+}
