@@ -1,5 +1,7 @@
 import { flickitySliders } from '../general/_sliders-config';
 import { Utils } from '../utils/general';
+import moment from 'moment-timezone';
+import tzLookup from 'tz-lookup';
 
 class PingenteDasEstrelas {
   constructor() {
@@ -264,22 +266,20 @@ class PingenteDasEstrelas {
       this.latitude = item.geometry.location.lat();
       this.longitude = item.geometry.location.lng();
 
-      let formatedName = item.formatted_address;
+      let formatedName = item.formatted_address; 
 
-      var urlTimezone = `https://api.opencagedata.com/geocode/v1/json?q=${this.latitude}+${this.longitude}&key=e62278057028403e96fdb4641efb4fad&language=pt-BR&pretty=1`;
+      const timezoneName = tzLookup(this.latitude, this.longitude);
 
-      jQuery.getJSON(urlTimezone, (data) => {
+      const offsetMinutes = moment.tz(timezoneName).utcOffset();
+      const hours = String(Math.floor(Math.abs(offsetMinutes) / 60)).padStart(2, '0');
+      const minutes = String(Math.abs(offsetMinutes) % 60).padStart(2, '0');
+      const sign = offsetMinutes >= 0 ? '+' : '-';
+      const mapTimezone = `${sign}${hours}${minutes}`;
 
-        let results = data.results;
-        let mapTimezone = results[0].annotations.timezone.offset_string;
-
-
-        this.latitude = results[0].geometry.lat;
-        this.longitude = results[0].geometry.lng;
-
-        this.mapLocationsLabel.innerHTML += `
-        <li data-timezone="${mapTimezone}" data-latitude="${this.latitude}" data-longitude="${this.longitude}">${formatedName}</li>`;
-      });
+      this.mapLocationsLabel.innerHTML += `
+      <li data-timezone="${mapTimezone}" data-latitude="${this.latitude}" data-longitude="${this.longitude}">
+        ${formatedName}
+      </li>`;
     });
 
     setTimeout(() => {
@@ -314,14 +314,17 @@ class PingenteDasEstrelas {
   }
 
   updateLocationOptionsOnDelay(item) {
-    clearTimeout(this.updateLocationOptions);
+    if (this.updateLocationOptions) {
+      clearTimeout(this.updateLocationOptions);
+    }
 
-    setTimeout(() => {
-      this.mapLocationsInputLabel.classList.add("-loading");
-    }, 500);
     this.updateLocationOptions = setTimeout(() => {
-      this.getLocations(item.value);
-    }, 1000);
+      this.mapLocationsInputLabel.classList.add("-loading");
+      this.getLocations(item.value).finally(() => {
+
+        this.mapLocationsInputLabel.classList.remove("-loading");
+      });
+    }, 300);
   };
 
   setDateByTimeZone(timestamp) {

@@ -201,8 +201,8 @@
     </div>
 
     <div class="price-block-info">
-      <p class="-price -tertiary"><span id="current-price">R$ 390,00</span></p>
-      <p><i class=""></i> 3x de R$<span class="price-installments">130,00</span> sem juros.</p>
+      <p class="-price -tertiary"><span id="current-price">R$ 339,00</span></p>
+      <p><i class=""></i> 4x de R$<span class="price-installments">113,00</span> sem juros.</p>
     </div>
     <div class="pendant-totals">
       <button class="pendant-buy-trigger button-default" style="text-transform: unset;">Eternize seu momento</button>

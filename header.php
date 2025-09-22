@@ -181,16 +181,16 @@ if(is_checkout() && !$param && empty( is_wc_endpoint_url('order-received') )) {
                   <a href="#">Quadros</a>
                   <ul class="sub-menu">
                     <li class="menu-item">
-                      <a href="<?php echo get_home_url() ?>/produto/mapa-das-estrelas">Mapa das Estrelas</a>
+                      <a href="<?php echo get_home_url() ?>/produto/mapa-das-estrelas/">Mapa das Estrelas</a>
                     </li>
                     <li class="menu-item">
-                      <a href="<?php echo get_home_url() ?>/produto/mapa-dos-planetas">Mapa dos Planetas</a>
+                      <a href="<?php echo get_home_url() ?>/produto/mapa-dos-planetas/">Mapa dos Planetas</a>
                     </li>
                     <li class="menu-item">
-                      <a href="<?php echo get_home_url() ?>/produto/quadro-signos">Signos</a>
+                      <a href="<?php echo get_home_url() ?>/produto/quadro-signos/">Signos</a>
                     </li>
                     <li class="menu-item">
-                      <a href="<?php echo get_home_url() ?>/produto/quadro-signos-kids">Signos Kids</a>
+                      <a href="<?php echo get_home_url() ?>/produto/quadro-signos-kids/">Signos Kids</a>
                     </li>
                   </ul>
                 </li>
@@ -198,10 +198,10 @@ if(is_checkout() && !$param && empty( is_wc_endpoint_url('order-received') )) {
                   <a href="#">Jóias e Acessórios</a>
                   <ul class="sub-menu">
                     <li class="menu-item">
-                      <a href="<?php echo get_home_url() ?>/produto/pingente">Pingente dos Planetas</a>
+                      <a href="<?php echo get_home_url() ?>/produto/pingente-dos-planetas/">Pingente dos Planetas</a>
                     </li>
                     <li class="menu-item">
-                      <a href="<?php echo get_home_url() ?>/produto/pingente-das-estrelas">Pingente das Estrelas</a>
+                      <a href="<?php echo get_home_url() ?>/produto/pingente-das-estrelas/">Pingente das Estrelas</a>
                     </li>
                     <!-- <li class="menu-item">
                       <a href="#">Pingente das Estrelas</a>

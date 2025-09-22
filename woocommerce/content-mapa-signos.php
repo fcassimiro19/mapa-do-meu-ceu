@@ -720,8 +720,8 @@ if (substr_count($server_name, 'homolog') > 0 || substr_count($server_name, 'dev
           </div>
           
           <div class="price-block-info">
-            <p class="-price">R$ <span id="current-price">185,00</span></p>
-            <p><i class="icon-card"></i> 3x de R$<span class="price-installments">58,33</span> sem juros.</p>
+            <p class="-price">R$ <span id="current-price">187,00</span></p>
+            <p><i class="icon-card"></i> 4x de R$<span class="price-installments">46,75</span> sem juros.</p>
           </div>
 
           <?php if ( current_user_can( 'manage_options' ) ) { ?>

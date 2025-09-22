@@ -95,7 +95,7 @@ class Utils {
   }
 
   getInstallments(price) {
-    return parseFloat(parseFloat(price) / 3).toFixed(2).replace('.', ',');
+    return parseFloat(parseFloat(price) / 4).toFixed(2).replace('.', ',');
   }
 }
 

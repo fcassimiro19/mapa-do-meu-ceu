@@ -10,7 +10,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.83.4",
+    "sass": "^1.92.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
@@ -32,8 +32,9 @@
     "html2canvas": "^1.4.1",
     "jquery": "^3.7.1",
     "js-cookie": "^3.0.5",
-    "node-sass": "^9.0.0",
+    "moment-timezone": "^0.6.0",
     "shopify-api": "^0.2.3",
+    "tz-lookup": "^6.1.25",
     "waypoints": "^4.0.1"
   }
 }

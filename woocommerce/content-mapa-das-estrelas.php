@@ -229,11 +229,11 @@ if (substr_count($server_name, 'homolog') > 0 || substr_count($server_name, 'dev
         <div class="next-block">
 			<div style="padding-bottom: 0.5rem; font-weight: 600; display: flex; flex-position: row; justify-content: space-between;">
 				  <div style="display: flex; flex-position: row">
-					  R$ <span data-ref="current-price">185,00</span>
+					  R$ <span data-ref="current-price">187,00</span>
 				</div>
 				<p class="installments-inline">
-				  <i class="icon-card"></i> 3x de R$
-				  <span data-ref="price-installments">58,33</span>
+				  <i class="icon-card"></i> 4x de R$
+				  <span data-ref="price-installments">46,75</span>
 				  sem juros.
 				</p>			
 			</div>
@@ -373,11 +373,11 @@ if (substr_count($server_name, 'homolog') > 0 || substr_count($server_name, 'dev
         <div class="next-block">
 						<div style="padding-bottom: 0.5rem; font-weight: 600; display: flex; flex-position: row; justify-content: space-between;">
 				  <div style="display: flex; flex-position: row">
-					  R$ <span data-ref="current-price">185,00</span>
+					  R$ <span data-ref="current-price">187,00</span>
 				</div>
 				<p class="installments-inline">
-				  <i class="icon-card"></i> 3x de R$
-				  <span data-ref="price-installments">58,33</span>
+				  <i class="icon-card"></i> 4x de R$
+				  <span data-ref="price-installments">46,75</span>
 				  sem juros.
 				</p>			
 			</div>
@@ -491,11 +491,11 @@ if (substr_count($server_name, 'homolog') > 0 || substr_count($server_name, 'dev
         <div class="next-block">
 						<div style="padding-bottom: 0.5rem; font-weight: 600; display: flex; flex-position: row; justify-content: space-between;">
 				  <div style="display: flex; flex-position: row">
-					  R$ <span data-ref="current-price">185,00</span>
+					  R$ <span data-ref="current-price">187,00</span>
 				</div>
 				<p class="installments-inline">
-				  <i class="icon-card"></i> 3x de R$
-				  <span data-ref="price-installments">58,33</span>
+				  <i class="icon-card"></i> 4x de R$
+				  <span data-ref="price-installments">46,75</span>
 				  sem juros.
 				</p>			
 			</div>
@@ -650,8 +650,8 @@ if (substr_count($server_name, 'homolog') > 0 || substr_count($server_name, 'dev
           </div>
           
           <div class="price-block-info">
-            <p class="-price">R$ <span id="current-price">185,00</span></p>
-<p><i class="icon-card"></i> 3x de R$<span class="price-installments">58,33</span> sem juros.</p>
+            <p class="-price">R$ <span id="current-price">187,00</span></p>
+<p><i class="icon-card"></i> 4x de R$<span class="price-installments">46,75</span> sem juros.</p>
           </div>
 
           <?php if ( current_user_can( 'manage_options' ) ) { ?>

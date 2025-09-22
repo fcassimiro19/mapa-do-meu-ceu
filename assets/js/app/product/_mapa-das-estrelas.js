@@ -1,4 +1,6 @@
 import { ProductMapUtils } from './_map-utils';
+import moment from 'moment-timezone';
+import tzLookup from 'tz-lookup';
 
 class MapaDasEstrelas extends ProductMapUtils {
   constructor() {
@@ -129,7 +131,9 @@ class MapaDasEstrelas extends ProductMapUtils {
     }
 
     self.mapMainLocationInput.addEventListener('input', function() {
-      self.updateLocationOptionsOnDelay(this);
+      if (this.value.trim().length >= 3) {
+        self.updateLocationOptionsOnDelay(this);
+      }
     })
 
     self.mapMainLocationNameInput.addEventListener('change', function() {
@@ -397,8 +401,6 @@ class MapaDasEstrelas extends ProductMapUtils {
     this.updateMapPreviewImage();
   }
 
-
-
   createLocationOptions(data) {
     let self = this;
     this.mapLocationsLabel.classList.remove('active');
@@ -407,20 +409,20 @@ class MapaDasEstrelas extends ProductMapUtils {
       this.latitude = item.geometry.location.lat();
       this.longitude = item.geometry.location.lng();
 
-//       let formatedName = item.formatted_address;
+      let formatedName = item.formatted_address;
 
-//       var urlTimezone = `https://api.opencagedata.com/geocode/v1/json?q=${this.latitude}+${this.longitude}&key=e62278057028403e96fdb4641efb4fad&language=pt-BR&pretty=1`;
+      const timezoneName = tzLookup(this.latitude, this.longitude);
 
-//       jQuery.getJSON(urlTimezone, (data) => {
+      const offsetMinutes = moment.tz(timezoneName).utcOffset();
+      const hours = String(Math.floor(Math.abs(offsetMinutes) / 60)).padStart(2, '0');
+      const minutes = String(Math.abs(offsetMinutes) % 60).padStart(2, '0');
+      const sign = offsetMinutes >= 0 ? '+' : '-';
+      const mapTimezone = `${sign}${hours}${minutes}`;
 
-//         let results = data.results;
-//         let mapTimezone = results[0].annotations.timezone.offset_string;
-//         this.latitude = results[0].geometry.lat;
-//         this.longitude = results[0].geometry.lng;
-		console.log('passei aqui');
-        this.mapLocationsLabel.innerHTML += `
-        <li data-timezone="-0300" data-latitude="${this.latitude}" data-longitude="${this.longitude}">${formatedName}</li>`;
-//       });
+      this.mapLocationsLabel.innerHTML += `
+      <li data-timezone="${mapTimezone}" data-latitude="${this.latitude}" data-longitude="${this.longitude}">
+        ${formatedName}
+      </li>`;
     });
 
     setTimeout(() => {
@@ -433,7 +435,7 @@ class MapaDasEstrelas extends ProductMapUtils {
       this.mapLocationsInputLabel.classList.remove("-loading");
       this.mapLocationsLabel.classList.add('active');
       this.updateConstructor();
-    }, 2000);
+    }, 300);
 
   }
 
@@ -455,7 +457,7 @@ class MapaDasEstrelas extends ProductMapUtils {
 
         this.mapLocationsInputLabel.classList.remove("-loading");
       });
-    }, 1000);
+    }, 700);
   };
 
   setDateByTimeZone(timestamp) {

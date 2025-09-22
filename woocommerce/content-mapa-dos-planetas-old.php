@@ -319,8 +319,8 @@
           </div>
 
           <div class="price-block-info">
-            <p class="-price -secondary">R$ <span id="current-price">185,00</span></p>
-            <p><i class="fas fa-credit-card"></i> 3x de R$<span class="price-installments">58,33</span> sem juros.</p>
+            <p class="-price -secondary">R$ <span id="current-price">187,00</span></p>
+            <p><i class="fas fa-credit-card"></i> 4x de R$<span class="price-installments">46,75</span> sem juros.</p>
           </div>
           
         	<button class="mt-4 btn btn-block btn-map-secondary text-uppercase" data-type="buy" >Compre agora</button>
