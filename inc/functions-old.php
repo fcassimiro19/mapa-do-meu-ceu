@@ -324,7 +324,7 @@ function sendPDFMail($email) {
 	$message .= '                           <div style="font-family:inherit;text-align:inherit">&nbsp;</div>';
 	$message .= '                           <div style="font-family:inherit;text-align:inherit;color:red"><strong>Dicas importantes para imprimir o Seu Mapa:</strong></div>';
 	$message .= '                           <div style="font-family:inherit;text-align:inherit">&nbsp;</div>';
-	$message .= '                           <div style="font-family:inherit;text-align:inherit"><strong>QR Code Spotify:&nbsp;</strong>o arquivo do link abaixo ainda não possui o QR pois o mesmo é adicionado manualmente por nossa equipe e será enviado nas próximas 24 horas.</div>';
+	$message .= '                           <div style="font-family:inherit;text-align:inherit"><strong>QR Code Spotify:&nbsp;</strong>Caso o pôster não contenha o QR Code do Spotify, conforme solicitado, entre em contato conosco para que possamos realizar a adequação.</div>';
 	$message .= '                           <div style="font-family:inherit;text-align:inherit">&nbsp;</div>';
 	$message .= '                           <div style="font-family:inherit;text-align:inherit"><strong>Impressão:&nbsp;</strong>recomendamos que você imprima em papel de efeito mate / fosco e com gramatura acima de 200gr. Evite papéis de efeito brilhante pois eles refletem muita luz e atrapalham a visualização.&nbsp;A qualidade do papel é um fator fundamental para que o Seu Mapa fique ainda mais bonito e especial.</div>';
 	$message .= '                           <div style="font-family:inherit;text-align:inherit">&nbsp;</div>';
@@ -580,19 +580,31 @@ add_action( 'woocommerce_order_status_processing', 'sendgrid_pdf' );
 function sendgrid_pdf( $order_id ) {
 	$order = wc_get_order( $order_id );
 	$email = $order->billing_email;
+  
+	if( check_order_has_pdf($order_id) ) {
+		$orderObject = wc_get_order( $order_id ); // get Order object by order id
+		$orderNote = __("O PDF foi enviado por e-mail"); // add note text
+		$orderObject->add_order_note( $orderNote, $is_customer_note = 0, $added_by_user = false);
+		sendPDFMail($email);
+	}
+
+	if(check_order_spotify($order_id)) {
+		notifySpotifyOrder($order_id);
+	}
+		
+}
+
+
+add_action( 'woocommerce_order_status_completed', 'sendCupom' );
+function sendCupom( $order_id ) {
+	$order = wc_get_order( $order_id );
+	$email = $order->billing_email;
 	$client_name = $order->billing_first_name;
 
 	$one_day    = 24 * 60 * 60;
 	$final_delay = $one_day * 90;
 	$today      = strtotime( date('Y-m-d') );
 	$expiry_date = date('Y-m-d', ( $today + $final_delay));
-  
-	if( check_order_has_pdf($order_id) ) {
-				$orderObject = wc_get_order( $order_id ); // get Order object by order id
-				$orderNote = __("O PDF foi enviado por e-mail"); // add note text
-				$orderObject->add_order_note( $orderNote, $is_customer_note = 0, $added_by_user = false);
-				sendPDFMail($email);
-	}
 
 	if( check_order_has_pendant($order_id) ) {
 		$pendant_coupon_code = generateRandomString(7); // Code
@@ -612,11 +624,6 @@ function sendgrid_pdf( $order_id ) {
 		
 		sendOrderCoupon($email, $client_name, $user_coupon_code, $friend_coupon_code);
 	}
-
-	if(check_order_spotify($order_id)) {
-		notifySpotifyOrder($order_id);
-	}
-		
 }
 
 function load_coupons() {

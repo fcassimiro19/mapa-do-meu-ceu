@@ -28,7 +28,7 @@ do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 <p style="background: red; color: #fff; padding: 10px;margin-bottom: 5px;">IMPRESSO / QUADRO: O prazo de produção é de 5 dias úteis SOMADOS ao prazo de entrega contados à partir do dia seguinte da aprovação do pedido.</p>
 <p style="background: red; color: #fff; padding: 10px;margin-bottom: 5px;">CÓDIGO DE RASTREAMENTO: Após o status mudar para ENVIADO você receberá um email com o código de rastreamento da transportadora (Mandaê) para acompanhar a entrega. Verifique a sua caixa de SPAM.</p>
 <!-- <p style="background: red; color: #fff; padding: 10px">Se você comprou: PDF DIGITAL: o seu mapa é enviado por email assim que o pagamento for confirmado. Por favor confira também a sua caixa de SPAM e/ou busque pelo email com o título "O SEU POSTER ESTA PRONTO PARA DOWNLOAD"</p> -->
-<p style="background: red; color: #fff; padding: 10px">SE VOCÊ COMPROU O FORMATO PDF/DIGITAL: o seu mapa estará disponível na sessão downloads do menu assim que o pagamento for confirmado. Caso tenha efetuado via boleto esse processo leva em média 24 horas.</p>
+<p style="background: red; color: #fff; padding: 10px">SE VOCÊ COMPROU O FORMATO PDF/DIGITAL: o seu mapa estará disponível na sessão downloads do menu assim que o pagamento for confirmado. <strong>Caso tenha efetuado via boleto esse processo leva em média 24 horas.</strong></p>
 <?php
 
 /*
