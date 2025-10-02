@@ -568,7 +568,7 @@ function my_wc_custom_cart_shipping_notice() {
 	echo '<tr class="shipping-notice alou"><td colspan="2" style="text-align: center"><small style="font-size: 16px; color: red;">';
 	// _e( '<strong>Atenção:</strong> O prazo de produção é de até 7 dias úteis além do prazo de entrega.', 'my-text-domain' );
 	// _e( '<strong>Atenção:</strong> Prazo de produção de ARQUIVO PDF, é no mesmo dia via e-mail e deve ser baixado em um computador. Todos os pedidos que não forem arquivos PDF a partir de 20/12 serão enviados em 09/01/2025, devido ao recesso de final de ano. Obrigado pela compreensão e ótimas festas!', 'my-text-domain' );
-	_e( '<strong>Atenção:</strong> Prazo de produção de ARQUIVO PDF, é no mesmo dia via e-mail e deve ser baixado em um computador. Todos os pedidos que não forem arquivos PDF o prazo de produção é de até 7 dias úteis além do prazo de entrega.', 'my-text-domain' );
+	_e( '<strong>Atenção:</strong> Prazo de produção de ARQUIVO PDF, é no mesmo dia via e-mail e deve ser baixado em um computador. Todos os pedidos que não forem arquivos PDF o prazo de produção é de até 5 dias úteis além do prazo de entrega.<br>Pedidos de Pingentes banhados a OURO o prazo de produção é de 7 dias úteis.', 'my-text-domain' );
 	echo '</small></td></tr>';
 	echo '<tr class="checkout-keep-buying"><td colspan="2"><a class="keep-buying" href="/">Continuar Comprando</a></td></tr>';
 }
